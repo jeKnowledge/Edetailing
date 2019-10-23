@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>	
+		<title> Cria quiz </title>
+		</head>
+
+
+<h1> Criar Quiz <h1>
+
+<form action='.' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='submit' value='Save' />
+</form>
+
+{% if Checkrepeat == True %}
+	<h1> ID ou NOME repetido <h1>
+{% endif %}
+
+
+{% endblock %}

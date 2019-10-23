@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>	
+		<title> every question made </title>
+		</head>
+
+<h1> ahoy </h1>
+
+<ul>
+{% for quest in list%}
+	<li> {{quest}}</li>
+
+{% endfor %}
+</ul>
+
+{% endblock %}
